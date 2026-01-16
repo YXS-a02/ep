@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "YXStool",
+  "version": "1.0.1",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ],
+    "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
