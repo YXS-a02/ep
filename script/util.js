@@ -44,4 +44,15 @@ var ytu = {
       return aKeys;
     }
   },
+  dialog: function (id) {
+    var dialog_w = document.createElement("div");
+    dialog_w.id = id;
+    dialog_w.style.position = "fixed";
+    dialog_w.style.bottom = "25px";
+    dialog_w.style.right = "25px";
+    dialog_w.style.height = "50px";
+    dialog_w.style.width = "50px";
+    document.getElementsByTagName("body")[0].appendChild(dialog_w);
+    return dialog_w
+  }
 };
