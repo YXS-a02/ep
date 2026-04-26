@@ -2,14 +2,14 @@
   "manifest_version": 3,
   "name": "YXStool",
   "version": "1.0.1",
+  "description":"YXStool",
   "permissions": [
     "activeTab",
     "tabs",
     "cookies",
     "webRequest",
-    "webRequestBlocking",
-    "http://*/*",
-    "https://*/*"
+    "storage",
+    "notifications"
   ],
   "action": {
     "default_icon": {
@@ -30,10 +30,26 @@
     "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
-      "js": ["script/content.js"]
+      "js": ["script/content.js","script/ytfdp.js"]
     }
   ],
   "background": {
     "service_worker": "script/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pic/*.png",
+        "pic/*.jpg",
+        "pic/*.jpeg",
+        "pic/*.gif",
+        "pic/*.svg",
+        "icon/*.png"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "omnibox": {
+    "keyword" : "go"
   }
 }

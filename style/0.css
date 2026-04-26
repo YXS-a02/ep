@@ -1,0 +1,5 @@
+.dlw{
+    position: fixed;	        /* 设置fixed固定定位 */
+    bottom: 20px;		/* 距离浏览器窗口下边框20px */
+    right: 20px;		/* 距离浏览器窗口右边框20px */
+}
