@@ -30,7 +30,8 @@
     "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
-      "js": ["script/content.js","script/ytfdp.js"]
+      "js": ["script/content.js","script/ytfdp.js"],
+      "css": ["style/1.css"]
     }
   ],
   "background": {
